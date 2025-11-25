@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 14, "column": 0}, "map": {"version":3,"sources":["file:///F:/hbowa-solar-solutions%20%281%29/app/solar-panels/specs/page.tsx"],"sourcesContent":["// app/solar-panels/specs/page.tsx\r\nexport default function SpecsPage() {\r\n  return <h1>Panel Specifications</h1>\r\n}"],"names":[],"mappings":"AAAA,kCAAkC;;;;;;;AACnB,SAAS;IACtB,qBAAO,6WAAC;kBAAG;;;;;;AACb"}}]
+}

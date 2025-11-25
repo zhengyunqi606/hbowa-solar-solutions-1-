@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 14, "column": 0}, "map": {"version":3,"sources":["file:///F:/hbowa-solar-solutions%20%281%29/app/solar-battery/lifepo4/page.tsx"],"sourcesContent":["\r\nexport default function lifepo4Page() {\r\n  return <h1>瓦学弟</h1>\r\n}"],"names":[],"mappings":";;;;;;AACe,SAAS;IACtB,qBAAO,6WAAC;kBAAG;;;;;;AACb"}}]
+}
