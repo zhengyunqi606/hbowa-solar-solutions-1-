@@ -23,8 +23,12 @@ export default function Navigation() {
       label: "Solar Battery",
       href: "/solar-battery",
       submenu: [
-        { label: "LiFePo4 Batteries", href: "/solar-battery/lifepo4" },
-        { label: "Battery Specs", href: "/solar-battery/specs" },
+        { label: "Energy Management Gateway", href: "/solar-battery/lifepo4" },
+        { label: "Solar Power Optimizer", href: "/solar-battery/specs" },
+        { label: "Smart Storage System", href: "/solar-battery/specs" },
+        { label: "Power Manager", href: "/solar-battery/specs" },
+        { label: "Charging Manager", href: "/solar-battery/specs" },
+        { label: "Distribution Management System", href: "/solar-battery/specs" },
       ],
     },
     {

@@ -7,12 +7,13 @@ export default function ProductGrid() {
       name: "Energy Management Gateway",
       image: "/smart-energy-gateway-device.jpg",
       description: "Smart Energy Monitoring Hub",
-      link: "/solar-battery",
+      link: "/solar-battery/lifepo4",
     },
     {
       name: "Solar Power Optimizer",
       image: "/solar-power-optimizer-device.jpg",
       description: "Photovoltaic Power Management",
+      link: "/solar-battery/specs",
     },
     {
       name: "Smart Storage System",

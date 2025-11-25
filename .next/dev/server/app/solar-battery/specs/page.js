@@ -1,6 +1,6 @@
 var R=require("../../../chunks/ssr/[turbopack]_runtime.js")("server/app/solar-battery/specs/page.js")
 R.c("server/chunks/ssr/275cd_next_dist_863e059f._.js")
-R.c("server/chunks/ssr/[root-of-the-server]__b39fa5ae._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__9bdd565a._.js")
 R.c("server/chunks/ssr/275cd_next_dist_792e9b48._.js")
 R.c("server/chunks/ssr/[root-of-the-server]__7f148858._.js")
 R.c("server/chunks/ssr/275cd_next_dist_client_components_builtin_global-error_832d590f.js")
