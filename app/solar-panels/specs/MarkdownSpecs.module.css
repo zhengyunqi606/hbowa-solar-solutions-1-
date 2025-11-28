@@ -1,0 +1,210 @@
+
+.container {
+  /* 删掉旧的 max-width 限制 */
+  /* max-width: 768px;   ← 注释或删除 */
+  width: 100%;            /* 占满栅格分配给它的空间 */
+  margin: 3rem 0;         /* 上下留空，左右随栅格 */
+  padding: 0 1.5rem;
+}
+
+.article {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  padding: 2.5rem 3rem;
+}
+
+/* 标题 */
+.h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+.h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 2.5rem 0 1rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+.h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #374151;
+  margin: 2rem 0 0.75rem;
+}
+
+/* 正文 */
+.p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #4b5563;
+  margin-bottom: 1.25em;
+}
+
+/* 列表 */
+.ul, .ol {
+  margin-left: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+/* 链接 */
+.a {
+  color: #2563eb;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+.a:hover {
+  border-bottom-color: #2563eb;
+}
+
+/* 图片 */
+.img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+}
+
+/* 引用 */
+.blockquote {
+  border-left: 4px solid #e5e7eb;
+  background: #f9fafb;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: #6b7280;
+  border-radius: 0 6px 6px 0;
+}
+
+/* 表格（remark-gfm 生成） */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+.thead {
+  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+}
+.th, .td {
+  padding: 0.75rem 1rem;
+  border: 1px solid #e5e7eb;
+  text-align: left;
+}
+.th {
+  font-weight: 600;
+  color: #111827;
+}
+.tbody .tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+.tbody .tr:hover {
+  background-color: #f3f4f6;
+  transition: background-color 0.2s;
+}
+
+/* 行内代码 */
+.inlineCode {
+  background: #f3f4f6;
+  color: #ef4444;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.875em;
+}
+
+/* ===== 两栏布局（仅新增） ===== */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 2.5rem;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* 右侧悬浮表单 */
+.formAside {
+  position: sticky;
+  top: 2rem;
+  height: max-content;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+}
+
+.formTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.25rem;
+}
+.formDesc {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.label {
+  font-size: 0.875rem;
+  color: #374151;
+}
+.input,
+.select,
+.textarea {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  transition: border-color 0.2s;
+}
+.input:focus,
+.select:focus,
+.textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+.textarea {
+  resize: vertical;
+}
+.submit {
+  margin-top: 0.5rem;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.65rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.submit:hover {
+  background: #1d4ed8;
+}
+
+/* 小屏堆叠 */
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+  .formAside { position: static; margin-top: 2rem; }
+}

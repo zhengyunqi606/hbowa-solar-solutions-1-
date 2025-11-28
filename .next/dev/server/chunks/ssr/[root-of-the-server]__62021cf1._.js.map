@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 14, "column": 0}, "map": {"version":3,"sources":["file:///F:/hbowa-solar-solutions%20%281%29/app/sucessfull-case/modern-urban-intelligent-community/page.tsx"],"sourcesContent":["// app/sucessfull-case/modern-urban-intelligent-community/page.tsx\r\nexport default function CommunityPage() {\r\n  return (\r\n    <div>\r\n      <h1 className=\"text-3xl font-bold\">Modern Urban Intelligent Community</h1>\r\n      <p className=\"text-lg\">这里是现代智能社区的详细内容。</p>\r\n    </div>\r\n  )\r\n}"],"names":[],"mappings":"AAAA,kEAAkE;;;;;;;AACnD,SAAS;IACtB,qBACE,6WAAC;;0BACC,6WAAC;gBAAG,WAAU;0BAAqB;;;;;;0BACnC,6WAAC;gBAAE,WAAU;0BAAU;;;;;;;;;;;;AAG7B"}}]
+}

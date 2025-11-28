@@ -1,19 +1,49 @@
+"use client"
+import { useState, useEffect } from "react"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 
+const SLUGS = ["mountain-tourist-resort", "modern-urban-intelligent-community"]
+
 export default function CaseStudies() {
-  const cases = [
-    {
-      title: "山区旅游度假村",
-      description: "通过 HDOWA 智能能源系统，年节能成本降低 45%",
-      image: "/luxury-mountain-resort-solar-panels.jpg",
-    },
-    {
-      title: "现代城市智能社区",
-      description: "为 500+ 户家庭提供能源管理服务，获得用户高度认可",
-      image: "/modern-smart-residential-community-houses.jpg",
-    },
-  ]
+  const [cases, setCases] = useState([
+    { title: "mountain tourist resort", description: "", image: "" },
+    { title: "modern urban intelligent community", description: "", image: "" },
+  ])
+
+  useEffect(() => {
+    const fetchCases = async () => {
+      const res = await fetch(`https://axiasolar.com/wp-json/wp/v2/hhommee?slug=${SLUGS.join(',')}`)
+      const pages = await res.json()
+
+      const updated = await Promise.all(
+        cases.map(async (c, idx) => {
+          const page = pages.find((p: { slug: string }) => p.slug === SLUGS[idx])
+          if (!page) return c
+
+          // 1. 特色图片
+          let image = "/placeholder.svg"
+          if (page.featured_media) {
+            const mediaRes = await fetch(`https://axiasolar.com/wp-json/wp/v2/media/${page.featured_media}`)
+            const mediaData = await mediaRes.json()
+            image = mediaData.source_url
+          }
+
+          // 2. 副标题（excerpt 或 title）
+       const description = page.title
+            ? page.excerpt.rendered.replace(/<[^>]*>/g, "")
+            : page.title
+
+          return { ...c, description, image }
+        })
+      )
+
+      setCases(updated)
+    }
+
+    fetchCases()
+  }, [])
 
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
@@ -26,8 +56,12 @@ export default function CaseStudies() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {cases.map((caseStudy, index) => (
-            <div key={index} className="group rounded-lg overflow-hidden hover:shadow-xl transition duration-300">
+          {cases.map((caseStudy) => (
+            <Link
+              key={caseStudy.title}
+              href={`/sucessfull-case/${caseStudy.title.replace(/ /g, '-')}`}
+              className="group rounded-lg overflow-hidden hover:shadow-xl transition duration-300 block"
+            >
               <div className="h-64 overflow-hidden bg-slate-100 relative">
                 <img
                   src={caseStudy.image || "/placeholder.svg"}
@@ -43,7 +77,7 @@ export default function CaseStudies() {
                   查看案例 <ArrowRight size={16} className="ml-2" />
                 </Button>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

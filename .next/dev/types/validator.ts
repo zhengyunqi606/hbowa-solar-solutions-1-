@@ -83,6 +83,24 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
+// Validate ../../../app/solar-battery/charging/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/solar-battery/charging">> = Specific
+  const handler = {} as typeof import("../../../app/solar-battery/charging/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/solar-battery/distribution/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/solar-battery/distribution">> = Specific
+  const handler = {} as typeof import("../../../app/solar-battery/distribution/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../../app/solar-battery/lifepo4/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/solar-battery/lifepo4">> = Specific
@@ -101,10 +119,28 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
+// Validate ../../../app/solar-battery/power/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/solar-battery/power">> = Specific
+  const handler = {} as typeof import("../../../app/solar-battery/power/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../../app/solar-battery/product/[id]/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/solar-battery/product/[id]">> = Specific
   const handler = {} as typeof import("../../../app/solar-battery/product/[id]/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/solar-battery/smart/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/solar-battery/smart">> = Specific
+  const handler = {} as typeof import("../../../app/solar-battery/smart/page.js")
   type __Check = __IsExpected<typeof handler>
   // @ts-ignore
   type __Unused = __Check
@@ -155,6 +191,24 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
+// Validate ../../../app/sucessfull-case/modern-urban-intelligent-community/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/sucessfull-case/modern-urban-intelligent-community">> = Specific
+  const handler = {} as typeof import("../../../app/sucessfull-case/modern-urban-intelligent-community/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/sucessfull-case/mountain-tourist-resort/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/sucessfull-case/mountain-tourist-resort">> = Specific
+  const handler = {} as typeof import("../../../app/sucessfull-case/mountain-tourist-resort/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../../app/api/inquiry/route.ts
 {
   type __IsExpected<Specific extends RouteHandlerConfig<"/api/inquiry">> = Specific
@@ -181,6 +235,24 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
 {
   type __IsExpected<Specific extends LayoutConfig<"/">> = Specific
   const handler = {} as typeof import("../../../app/layout.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/solar-battery/smart/layout.tsx
+{
+  type __IsExpected<Specific extends LayoutConfig<"/solar-battery/smart">> = Specific
+  const handler = {} as typeof import("../../../app/solar-battery/smart/layout.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/solar-battery/specs/layout.tsx
+{
+  type __IsExpected<Specific extends LayoutConfig<"/solar-battery/specs">> = Specific
+  const handler = {} as typeof import("../../../app/solar-battery/specs/layout.js")
   type __Check = __IsExpected<typeof handler>
   // @ts-ignore
   type __Unused = __Check

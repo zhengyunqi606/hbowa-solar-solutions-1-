@@ -19,21 +19,25 @@ export default function ProductGrid() {
       name: "Smart Storage System",
       image: "/battery-storage-system-white.jpg",
       description: "Energy Storage Solution",
+      link: "/solar-battery/smart",
     },
     {
       name: "Power Manager",
       image: "/power-management-system.jpg",
       description: "Multi-Channel Power Control",
+      link: "/solar-battery/power",
     },
     {
       name: "Charging Manager",
       image: "/ev-charging-management-system.jpg",
       description: "EV Charging Management",
+      link: "/solar-battery/charging",
     },
     {
       name: "Distribution Management System",
       image: "/distribution-management-system.png",
       description: "Whole House Energy Distribution",
+      link: "/solar-battery/distribution",
     },
   ]
 

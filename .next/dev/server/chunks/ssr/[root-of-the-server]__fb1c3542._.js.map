@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 20, "column": 0}, "map": {"version":3,"sources":["file:///F:/hbowa-solar-solutions%20%281%29/app/solar-battery/specs/page.tsx"],"sourcesContent":["// 文件：app/solar-battery/specs/page.tsx   ← 这个是 Server Component\r\nimport fs from 'fs'\r\nimport path from 'path'\r\nimport SpecsClient from './SpecsClient'   // ← 我们马上新建这个文件\r\n\r\nconst mdFilePath = path.join(process.cwd(), 'app/markdown/drill-rig-intro.md')\r\nconst mdContent = fs.readFileSync(mdFilePath, 'utf8')\r\n\r\nexport default function Page() {\r\n  return <DrillRigClient mdContent={mdContent} />\r\n}"],"names":[],"mappings":"AAAA,+DAA+D;;;;;;AAC/D;AACA;;;;AAGA,MAAM,aAAa,4GAAI,CAAC,IAAI,CAAC,QAAQ,GAAG,IAAI;AAC5C,MAAM,YAAY,wGAAE,CAAC,YAAY,CAAC,YAAY;AAE/B,SAAS;IACtB,qBAAO,6WAAC;QAAe,WAAW;;;;;;AACpC"}}]
+}

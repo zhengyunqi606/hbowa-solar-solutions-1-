@@ -1,5 +1,5 @@
 var R=require("../../chunks/ssr/[turbopack]_runtime.js")("server/app/solar-system/page.js")
-R.c("server/chunks/ssr/node_modules__pnpm_85b0c710._.js")
+R.c("server/chunks/ssr/node_modules__pnpm_b0946684._.js")
 R.c("server/chunks/ssr/[root-of-the-server]__94a343b7._.js")
 R.c("server/chunks/ssr/275cd_next_dist_792e9b48._.js")
 R.c("server/chunks/ssr/[root-of-the-server]__7f148858._.js")

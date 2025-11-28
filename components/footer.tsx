@@ -1,5 +1,6 @@
 import { Leaf } from "lucide-react"
 
+
 export default function Footer() {
   return (
     <footer className="bg-slate-900 text-slate-100 py-16 px-4 sm:px-6 lg:px-8">
@@ -75,17 +76,17 @@ export default function Footer() {
             <h4 className="font-bold mb-4">公司</h4>
             <ul className="space-y-2 text-slate-400">
               <li>
-                <a href="#" className="hover:text-white transition">
-                  关于我们
-                </a>
-              </li>
+         <a href="/hbowa/about-us" className="hover:text-white transition">
+         关于我们
+         </a>
+         </li>
               <li>
                 <a href="#" className="hover:text-white transition">
                   新闻中心
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition">
+                <a href="/hbowa/contact-us" className="hover:text-white transition">
                   联系我们
                 </a>
               </li>

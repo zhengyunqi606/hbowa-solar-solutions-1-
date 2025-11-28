@@ -1,8 +1,10 @@
 (globalThis.TURBOPACK_CHUNK_LISTS || (globalThis.TURBOPACK_CHUNK_LISTS = [])).push({
     script: typeof document === "object" ? document.currentScript : undefined,
     chunks: [
-  "static/chunks/_db3ad7a3._.js",
-  "static/chunks/node_modules__pnpm_7b9c5d00._.js"
+  "static/chunks/f545a_micromark_dev_lib_2a08bc19._.js",
+  "static/chunks/b5ecd_micromark-core-commonmark_dev_lib_bc76a96f._.js",
+  "static/chunks/node_modules__pnpm_1d40f720._.js",
+  "static/chunks/app_solar-battery_specs_SpecsClient_tsx_5220c933._.js"
 ],
     source: "dynamic"
 });

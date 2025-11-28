@@ -123,3 +123,33 @@
     @apply bg-background text-foreground;
   }
 }
+/* 纯 CSS 无限循环轮播动画 */
+@keyframes carousel {
+  0%    { transform: translateX(0); }
+  16.66% { transform: translateX(0); }
+  33.33% { transform: translateX(-100%); }
+  50%   { transform: translateX(-200%); }
+  66.66% { transform: translateX(-300%); }
+  83.33% { transform: translateX(-400%); }
+  100%  { transform: translateX(0); }
+}
+
+.animate-carousel {
+  animation: carousel 30s linear infinite;
+}
+
+/* 鼠标悬停时暂停（用户体验更好） */
+.animate-carousel:hover {
+  animation-play-state: paused;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
