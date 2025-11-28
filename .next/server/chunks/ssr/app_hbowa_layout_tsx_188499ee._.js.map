@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../app/hbowa/layout.tsx"],"sourcesContent":["import type { ReactNode } from \"react\"\n\nexport default function HbowaLayout({\n  children,\n}: {\n  children: ReactNode\n}) {\n  return <>{children}</>\n}\n"],"names":[],"mappings":"wDAEe,SAAS,EAAY,UAClC,CAAQ,CAGT,EACC,MAAO,CAAA,EAAA,EAAA,GAAA,EAAA,EAAA,QAAA,CAAA,UAAG,GACZ"}

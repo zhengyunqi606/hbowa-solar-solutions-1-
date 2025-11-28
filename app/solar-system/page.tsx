@@ -18,8 +18,8 @@ export default function SolarPanelsPage() {
         { id: 8, name: "650W Solar Panel", specs: "Monocrystalline, 108 cells", image: "/650w-solar-panel.jpg" },
       ],
     },
+    
     {
-      title: "German Solar Panels Series",
       description: "Premium German-engineered solar panels with superior quality",
       products: [
         { id: 9, name: "280W German Panel", specs: "Premium efficiency", image: "/280w-german-solar-panel.jpg" },

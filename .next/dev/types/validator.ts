@@ -83,24 +83,6 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
-// Validate ../../../app/solar-battery/charging/page.tsx
-{
-  type __IsExpected<Specific extends AppPageConfig<"/solar-battery/charging">> = Specific
-  const handler = {} as typeof import("../../../app/solar-battery/charging/page.js")
-  type __Check = __IsExpected<typeof handler>
-  // @ts-ignore
-  type __Unused = __Check
-}
-
-// Validate ../../../app/solar-battery/distribution/page.tsx
-{
-  type __IsExpected<Specific extends AppPageConfig<"/solar-battery/distribution">> = Specific
-  const handler = {} as typeof import("../../../app/solar-battery/distribution/page.js")
-  type __Check = __IsExpected<typeof handler>
-  // @ts-ignore
-  type __Unused = __Check
-}
-
 // Validate ../../../app/solar-battery/lifepo4/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/solar-battery/lifepo4">> = Specific
@@ -114,15 +96,6 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
 {
   type __IsExpected<Specific extends AppPageConfig<"/solar-battery">> = Specific
   const handler = {} as typeof import("../../../app/solar-battery/page.js")
-  type __Check = __IsExpected<typeof handler>
-  // @ts-ignore
-  type __Unused = __Check
-}
-
-// Validate ../../../app/solar-battery/power/page.tsx
-{
-  type __IsExpected<Specific extends AppPageConfig<"/solar-battery/power">> = Specific
-  const handler = {} as typeof import("../../../app/solar-battery/power/page.js")
   type __Check = __IsExpected<typeof handler>
   // @ts-ignore
   type __Unused = __Check
