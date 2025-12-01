@@ -1580,69 +1580,33 @@ __turbopack_context__.s([
     ()=>CaseStudies
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/next@16.0.3_react-dom@19.2.0_react@19.2.0__react@19.2.0/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/next@16.0.3_react-dom@19.2.0_react@19.2.0__react@19.2.0/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/next@16.0.3_react-dom@19.2.0_react@19.2.0__react@19.2.0/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ui/button.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$454$2e$0_react$40$19$2e$2$2e$0$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$right$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowRight$3e$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/icons/arrow-right.js [app-client] (ecmascript) <export default as ArrowRight>");
-;
-var _s = __turbopack_context__.k.signature();
 "use client";
 ;
 ;
 ;
 ;
-const SLUGS = [
-    "mountain-tourist-resort",
-    "modern-urban-intelligent-community"
-];
+// 真实图片路径（已放在 public 根目录）
+const RESORT_IMAGE = "/modern-smart-home-house-with-solar-panels-green-ga.jpg";
+const COMMUNITY_IMAGE = "/modern-smart-residential-community-houses.jpg" // 如果你有第二张图就放这里，没有就用同一张也行
+;
 function CaseStudies() {
-    _s();
-    const [cases, setCases] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([
+    const cases = [
         {
-            title: "mountain tourist resort",
-            description: "",
-            image: ""
+            slug: "mountain-tourist-resort",
+            title: "Mountain Tourist Resort",
+            description: "高海拔旅游度假区 · 2.1MW 柔性光伏系统 · 年发电280万度",
+            image: RESORT_IMAGE
         },
         {
-            title: "modern urban intelligent community",
-            description: "",
-            image: ""
+            slug: "modern-urban-intelligent-community",
+            title: "Modern Urban Intelligent Community",
+            description: "城市智慧社区分布式光伏 · 零碳建筑典范",
+            image: COMMUNITY_IMAGE || RESORT_IMAGE
         }
-    ]);
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
-        "CaseStudies.useEffect": ()=>{
-            const fetchCases = {
-                "CaseStudies.useEffect.fetchCases": async ()=>{
-                    const res = await fetch(`https://axiasolar.com/wp-json/wp/v2/hhommee?slug=${SLUGS.join(',')}`);
-                    const pages = await res.json();
-                    const updated = await Promise.all(cases.map({
-                        "CaseStudies.useEffect.fetchCases": async (c, idx)=>{
-                            const page = pages.find({
-                                "CaseStudies.useEffect.fetchCases.page": (p)=>p.slug === SLUGS[idx]
-                            }["CaseStudies.useEffect.fetchCases.page"]);
-                            if (!page) return c;
-                            // 1. 特色图片
-                            let image = "/placeholder.svg";
-                            if (page.featured_media) {
-                                const mediaRes = await fetch(`https://axiasolar.com/wp-json/wp/v2/media/${page.featured_media}`);
-                                const mediaData = await mediaRes.json();
-                                image = mediaData.source_url;
-                            }
-                            // 2. 副标题（excerpt 或 title）
-                            const description = page.title ? page.excerpt.rendered.replace(/<[^>]*>/g, "") : page.title;
-                            return {
-                                ...c,
-                                description,
-                                image
-                            };
-                        }
-                    }["CaseStudies.useEffect.fetchCases"]));
-                    setCases(updated);
-                }
-            }["CaseStudies.useEffect.fetchCases"];
-            fetchCases();
-        }
-    }["CaseStudies.useEffect"], []);
+    ];
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
         className: "py-20 px-4 sm:px-6 lg:px-8 bg-white",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1656,122 +1620,122 @@ function CaseStudies() {
                             children: "成功案例"
                         }, void 0, false, {
                             fileName: "[project]/components/case-studies.tsx",
-                            lineNumber: 52,
+                            lineNumber: 30,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                             className: "text-lg text-muted-foreground max-w-2xl mx-auto",
-                            children: "通过真实的项目案例，展示 HDOWA 的解决方案效果"
+                            children: "通过真实的项目案例，展示 Hbowa 的解决方案效果"
                         }, void 0, false, {
                             fileName: "[project]/components/case-studies.tsx",
-                            lineNumber: 53,
+                            lineNumber: 33,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/case-studies.tsx",
-                    lineNumber: 51,
+                    lineNumber: 29,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "grid grid-cols-1 md:grid-cols-2 gap-8",
                     children: cases.map((caseStudy)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                            href: `/sucessfull-case/${caseStudy.title.replace(/ /g, '-')}`,
-                            className: "group rounded-lg overflow-hidden hover:shadow-xl transition duration-300 block",
+                            href: `/sucessfull-case/${caseStudy.slug}`,
+                            className: "group rounded-xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-all duration-300 block border border-gray-100",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "h-64 overflow-hidden bg-slate-100 relative",
+                                    className: "relative h-64 md:h-72 overflow-hidden bg-slate-100",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                            src: caseStudy.image || "/placeholder.svg",
+                                            src: caseStudy.image,
                                             alt: caseStudy.title,
-                                            className: "w-full h-full object-cover group-hover:scale-110 transition duration-300"
+                                            className: "w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                                         }, void 0, false, {
                                             fileName: "[project]/components/case-studies.tsx",
-                                            lineNumber: 66,
+                                            lineNumber: 46,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "absolute inset-0 bg-black/30 group-hover:bg-black/40 transition"
+                                            className: "absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                                         }, void 0, false, {
                                             fileName: "[project]/components/case-studies.tsx",
-                                            lineNumber: 71,
+                                            lineNumber: 51,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/case-studies.tsx",
-                                    lineNumber: 65,
+                                    lineNumber: 45,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "p-6 bg-white",
+                                    className: "p-7",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                            className: "text-xl font-bold text-foreground mb-2",
+                                            className: "text-2xl font-bold text-foreground mb-3",
                                             children: caseStudy.title
                                         }, void 0, false, {
                                             fileName: "[project]/components/case-studies.tsx",
-                                            lineNumber: 74,
+                                            lineNumber: 55,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "text-muted-foreground mb-4",
+                                            className: "text-base text-primary font-medium mb-4 leading-relaxed",
                                             children: caseStudy.description
                                         }, void 0, false, {
                                             fileName: "[project]/components/case-studies.tsx",
-                                            lineNumber: 75,
+                                            lineNumber: 60,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
                                             variant: "ghost",
-                                            className: "text-primary hover:text-primary/90",
+                                            size: "sm",
+                                            className: "text-primary hover:text-primary/80 font-medium",
                                             children: [
-                                                "查看案例 ",
+                                                "查看详细案例",
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$454$2e$0_react$40$19$2e$2$2e$0$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$right$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowRight$3e$__["ArrowRight"], {
-                                                    size: 16,
-                                                    className: "ml-2"
+                                                    size: 18,
+                                                    className: "ml-2 group-hover:translate-x-1 transition"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/case-studies.tsx",
-                                                    lineNumber: 77,
-                                                    columnNumber: 24
+                                                    lineNumber: 66,
+                                                    columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/case-studies.tsx",
-                                            lineNumber: 76,
+                                            lineNumber: 64,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/case-studies.tsx",
-                                    lineNumber: 73,
+                                    lineNumber: 54,
                                     columnNumber: 15
                                 }, this)
                             ]
-                        }, caseStudy.title, true, {
+                        }, caseStudy.slug, true, {
                             fileName: "[project]/components/case-studies.tsx",
-                            lineNumber: 60,
+                            lineNumber: 40,
                             columnNumber: 13
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/components/case-studies.tsx",
-                    lineNumber: 58,
+                    lineNumber: 38,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/case-studies.tsx",
-            lineNumber: 50,
+            lineNumber: 28,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/case-studies.tsx",
-        lineNumber: 49,
+        lineNumber: 27,
         columnNumber: 5
     }, this);
 }
-_s(CaseStudies, "4bmmfs0ZffhpMvXw2xatX0tdwbs=");
 _c = CaseStudies;
 var _c;
 __turbopack_context__.k.register(_c, "CaseStudies");

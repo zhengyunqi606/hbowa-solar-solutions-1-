@@ -1,53 +1,52 @@
 // app/sucessfull-case/mountain-tourist-resort/page.tsx
-"use client"
-import { useState, useEffect } from "react"
+import React from 'react';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import path from 'path';
+import { promises as fs } from 'fs';
+import styles from './caseone.module.css';
+import Image from 'next/image';
 
-export default function ResortPage() {
-  const [content, setContent] = useState("")
-  const [image, setImage] = useState("")
+async function getMarkdownContent() {
+  const fullPath = path.join(process.cwd(), 'app/markdown/home-caseone.md');
+  const fileContents = await fs.readFile(fullPath, 'utf8');
+  return fileContents;
+}
 
-  useEffect(() => {
-    fetch("https://axiasolar.com/wp-json/wp/v2/hhommee?slug=mountain-tourist-resort")
-      .then((res) => res.json())
-      .then(async (data) => {
-        if (data && data.length > 0) {
-          // 1. 正文
-          setContent(data[0].content.rendered)
-
-          // 2. 特色图片
-          if (data[0].featured_media) {
-            const mediaRes = await fetch(`https://axiasolar.com/wp-json/wp/v2/media/${data[0].featured_media}`)
-            const mediaData = await mediaRes.json()
-            setImage(mediaData.source_url)
-          }
-        } else {
-          setContent("未找到内容，请检查 slug 是否正确")
-        }
-      })
-      .catch((err) => {
-        console.error("加载内容失败:", err)
-        setContent("内容加载失败")
-      })
-  }, [])
+export default async function MountainTouristResortPage() {
+  const content = await getMarkdownContent();
 
   return (
-    <div className="max-w-4xl mx-auto py-10 px-6">
-      {/* 主图 */}
-      {image && (
-        <img
-          src={image}
-          alt="Mountain Tourist Resort"
-          className="w-full h-auto mb-6 rounded-lg"
-        />
-      )}
-
-      <h1 className="text-3xl font-bold mb-6">Mountain Tourist Resort</h1>
-
-      {/* 渲染 WordPress 正文（含超链接） */}
-      <div
-        className="prose prose-slate max-w-none"
-        dangerouslySetInnerHTML={{ __html: content }}
-      />
-    </div>
-  )
+    <article className={`${styles.proseEnhance} prose prose-lg mx-auto max-w-5xl px-6 py-10 lg:prose-xl`}>
+      <ReactMarkdown
+        remarkPlugins={[remarkGfm]}
+        components={{
+          h1: ({ children }) => <h1 className={styles.customH1}>{children}</h1>,
+          table: ({ children }) => <table className={styles.customTable}>{children}</table>,
+          
+          // 新增：完美图片渲染
+          img: ({ src, alt }) => {
+            if (!src || typeof src !== 'string') return null;
+            return (
+              <figure className={styles.imageWrapper}>
+                <Image
+                  src={src}
+                  alt={alt || '项目图片'}
+                  width={1200}
+                  height={800}
+                  className={styles.customImage}
+                  style={{ width: '100%', height: 'auto' }}
+                  placeholder="blur"
+                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
+                />
+                {alt && <figcaption className={styles.imageCaption}>{alt}</figcaption>}
+              </figure>
+            );
+          },
+        }}
+      >
+        {content}
+      </ReactMarkdown>
+    </article>
+  );
 }

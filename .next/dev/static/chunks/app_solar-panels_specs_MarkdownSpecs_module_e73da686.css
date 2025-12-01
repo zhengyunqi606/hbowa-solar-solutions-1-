@@ -1,7 +1,7 @@
 /* [project]/app/solar-panels/specs/MarkdownSpecs.module.css [app-client] (css) */
 .MarkdownSpecs-module__mTRkSG__container {
-  width: 100%;
-  margin: 3rem 0;
+  width: 130%;
+  margin: .5rem 0 .5rem -5rem;
   padding: 0 1.5rem;
 }
 
@@ -127,7 +127,7 @@
 .MarkdownSpecs-module__mTRkSG__layout {
   grid-template-columns: 1fr 360px;
   align-items: start;
-  gap: 2.5rem;
+  gap: 5.5rem;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.5rem;
@@ -140,8 +140,9 @@
   height: max-content;
   padding: 2rem;
   position: sticky;
-  top: 2rem;
-  box-shadow: 0 8px 30px #00000014;
+  top: 3rem;
+  transform: translate(4rem, -1rem)scale(.95);
+  box-shadow: 0 8px 60px #00000014;
 }
 
 .MarkdownSpecs-module__mTRkSG__formTitle {

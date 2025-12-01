@@ -1,6 +1,18 @@
 {
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/inquiry/route": "app/api/inquiry/route.js",
+  "/calculator/page": "app/calculator/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/hbowa/about-us/page": "app/hbowa/about-us/page.js",
+  "/hbowa/contact-us/page": "app/hbowa/contact-us/page.js",
   "/page": "app/page.js",
+  "/solar-battery/lifepo4/page": "app/solar-battery/lifepo4/page.js",
   "/solar-battery/smart/page": "app/solar-battery/smart/page.js",
+  "/solar-battery/specs/page": "app/solar-battery/specs/page.js",
   "/solar-panels/page": "app/solar-panels/page.js",
-  "/solar-panels/specs/page": "app/solar-panels/specs/page.js"
+  "/solar-panels/series/page": "app/solar-panels/series/page.js",
+  "/solar-panels/specs/page": "app/solar-panels/specs/page.js",
+  "/solar-system/page": "app/solar-system/page.js",
+  "/sucessfull-case/modern-urban-intelligent-community/page": "app/sucessfull-case/modern-urban-intelligent-community/page.js",
+  "/sucessfull-case/mountain-tourist-resort/page": "app/sucessfull-case/mountain-tourist-resort/page.js"
 }

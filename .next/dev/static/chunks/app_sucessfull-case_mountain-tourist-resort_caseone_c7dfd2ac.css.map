@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file:///F:/hbowa-solar-solutions%20%281%29/app/sucessfull-case/mountain-tourist-resort/caseone.css"],"sourcesContent":["/* app/sucessfull-case/mountain-tourist-resort/caseone.module.css */\r\n\r\n.customH1 {\r\n  font-size: 3.5rem !important;     /* 比默认 h1 更大 */\r\n  font-weight: 900 !important;      /* 超粗 */\r\n  line-height: 1.1;\r\n  margin-bottom: 2rem !important;\r\n  background: linear-gradient(to right, #1e40af, #3b82f6);\r\n  -webkit-background-clip: text;\r\n  background-clip: text;\r\n  -webkit-text-fill-color: transparent;\r\n  /* 可选：加个蓝紫渐变色，非常高级 */\r\n}\r\n\r\n/* 如果你不想渐变色，就用这行纯黑超粗 */\r\n.customH1Plain {\r\n  font-size: 3.5rem !important;\r\n  font-weight: 900 !important;\r\n  color: #0f172a !important;   /* 深灰黑 */\r\n}"],"names":[],"mappings":"AAEA;;;;;;;;;;;AAaA"}}]
+}

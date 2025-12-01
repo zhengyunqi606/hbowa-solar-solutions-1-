@@ -1,0 +1,19 @@
+/* [project]/app/sucessfull-case/mountain-tourist-resort/caseone.css [app-client] (css) */
+.customH1 {
+  background: linear-gradient(to right, #1e40af, #3b82f6);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  line-height: 1.1;
+  margin-bottom: 2rem !important;
+  font-size: 3.5rem !important;
+  font-weight: 900 !important;
+}
+
+.customH1Plain {
+  color: #0f172a !important;
+  font-size: 3.5rem !important;
+  font-weight: 900 !important;
+}
+
+/*# sourceMappingURL=app_sucessfull-case_mountain-tourist-resort_caseone_c7dfd2ac.css.map*/

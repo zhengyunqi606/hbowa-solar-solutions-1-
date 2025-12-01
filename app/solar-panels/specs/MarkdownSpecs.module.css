@@ -1,15 +1,12 @@
-
 .container {
-  /* 删掉旧的 max-width 限制 */
-  /* max-width: 768px;   ← 注释或删除 */
-  width: 100%;            /* 占满栅格分配给它的空间 */
-  margin: 3rem 0;         /* 上下留空，左右随栅格 */
+  width: 130%;
+  margin: 0.5rem 0;
+  margin-left: -5rem;   /* ← 往左偏移 2rem */
   padding: 0 1.5rem;
 }
-
 .article {
   background: #ffffff;
-  border-radius: 12px;
+  border-radius: 12px;  
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
   padding: 2.5rem 3rem;
 }
@@ -129,24 +126,23 @@
 .layout {
   display: grid;
   grid-template-columns: 1fr 360px;
-  gap: 2.5rem;
+  gap: 5.5rem;  /* 调整为 3.5rem，间距变大 */
   align-items: start;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
-
 /* 右侧悬浮表单 */
 .formAside {
   position: sticky;
-  top: 2rem;
+  top: 3rem;
   height: max-content;
   background: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 60px rgba(0, 0, 0, 0.08);
   padding: 2rem;
+  transform: translate(4rem, -1rem) scale(0.95);   /* 整体右移 4rem、上移 1rem、缩小到 95% */
 }
-
 .formTitle {
   font-size: 1.25rem;
   font-weight: 700;

@@ -126,8 +126,8 @@ export function ContactForm() {
                 <span className="text-xl">✉️</span>
                 <div>
                   <p className="font-semibold">Email</p>
-                  <a href="mailto:info@pretapower.com" className="text-blue-100 hover:text-white">
-                    info@pretapower.com
+                  <a href="mailto:zijitian.com" className="text-blue-100 hover:text-white">
+                    zijitian.com
                   </a>
                 </div>
               </div>

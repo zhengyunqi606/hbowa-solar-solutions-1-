@@ -230,3 +230,21 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   // @ts-ignore
   type __Unused = __Check
 }
+
+// Validate ../../../app/solar-panels/specs/layout.tsx
+{
+  type __IsExpected<Specific extends LayoutConfig<"/solar-panels/specs">> = Specific
+  const handler = {} as typeof import("../../../app/solar-panels/specs/layout.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/sucessfull-case/layout.tsx
+{
+  type __IsExpected<Specific extends LayoutConfig<"/sucessfull-case">> = Specific
+  const handler = {} as typeof import("../../../app/sucessfull-case/layout.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}

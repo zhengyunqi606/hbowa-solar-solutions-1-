@@ -593,7 +593,6 @@ function SolarPanelsPage() {
             ]
         },
         {
-            title: "German Solar Panels Series",
             description: "Premium German-engineered solar panels with superior quality",
             products: [
                 {

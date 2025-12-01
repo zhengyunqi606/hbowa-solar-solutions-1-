@@ -4,7 +4,7 @@
 type AppRoutes = "/" | "/contact" | "/hbowa/about-us" | "/hbowa/contact-us" | "/solar-battery" | "/solar-battery/lifepo4" | "/solar-battery/product/[id]" | "/solar-battery/smart" | "/solar-battery/specs" | "/solar-panels" | "/solar-panels/series" | "/solar-panels/specs" | "/solar-system" | "/sucessfull-case/modern-urban-intelligent-community" | "/sucessfull-case/mountain-tourist-resort"
 type AppRouteHandlerRoutes = "/api/inquiry"
 type PageRoutes = never
-type LayoutRoutes = "/" | "/hbowa" | "/solar-battery/smart" | "/solar-battery/specs"
+type LayoutRoutes = "/" | "/hbowa" | "/solar-battery/smart" | "/solar-battery/specs" | "/solar-panels/specs" | "/sucessfull-case"
 type RedirectRoutes = never
 type RewriteRoutes = never
 type Routes = AppRoutes | PageRoutes | LayoutRoutes | RedirectRoutes | RewriteRoutes | AppRouteHandlerRoutes
@@ -26,6 +26,7 @@ interface ParamMap {
   "/solar-panels/series": {}
   "/solar-panels/specs": {}
   "/solar-system": {}
+  "/sucessfull-case": {}
   "/sucessfull-case/modern-urban-intelligent-community": {}
   "/sucessfull-case/mountain-tourist-resort": {}
 }
@@ -38,6 +39,8 @@ interface LayoutSlotMap {
   "/hbowa": never
   "/solar-battery/smart": never
   "/solar-battery/specs": never
+  "/solar-panels/specs": never
+  "/sucessfull-case": never
 }
 
 
