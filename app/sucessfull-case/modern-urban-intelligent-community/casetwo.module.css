@@ -1,0 +1,114 @@
+/* caseone.module.css —— 紧凑美观版（基于你原版，仅微调 + 新增图片支持） */
+
+.customH1 {
+  font-size: 2.75rem !important;
+  font-weight: 900 !important;
+  line-height: 1.15;
+  margin-bottom: 2rem !important;      /* ← 原 2.5rem → 2rem 收紧 */
+  color: #0f172a !important;
+  letter-spacing: -0.02em;
+}
+
+.customTable {
+  width: 100% !important;
+  border-collapse: separate !important;
+  border-spacing: 0;
+  border-radius: 12px !important;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  margin: 2rem 0 !important;           /* ← 原 2.5rem → 2rem 收紧 */
+  font-size: 1rem !important;
+}
+
+.customTable th {
+  background-color: #f8fafc !important;
+  color: #1e293b !important;
+  font-weight: 600 !important;
+  text-align: left !important;
+  padding: 1rem 1.25rem !important;
+  border-bottom: 2px solid #e2e8f0 !important;
+}
+
+.customTable td {
+  padding: 1rem 1.25rem !important;
+  background-color: #ffffff !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+}
+
+.customTable tr:last-child td {
+  border-bottom: none !important;
+}
+
+.customTable tr:hover td {
+  background-color: #f1f5f9 !important;
+  transition: background-color 0.2s ease;
+}
+
+/* prose 整体节奏收紧，更紧凑专业 */
+.proseEnhance {
+  line-height: 1.75;                    /* ← 原 1.8 → 1.75 */
+  color: #334155;
+}
+
+.proseEnhance :where(h2) {
+  font-size: 1.875rem !important;
+  font-weight: 800 !important;
+  color: #1e293b !important;
+  margin-top: 2.8rem !important;        /* ← 原 3.5rem → 2.8rem */
+  margin-bottom: 1rem !important;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.proseEnhance :where(h3) {
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  color: #1e293b !important;
+  margin-top: 2rem !important;          /* ← 原 2.5rem → 2rem */
+}
+
+.proseEnhance :where(p) {
+  margin: 1rem 0 !important;            /* ← 原 1.25rem → 1rem */
+}
+
+.proseEnhance :where(ul, ol) {
+  margin: 1.2rem 0 !important;          /* ← 原 1.5rem → 1.2rem */
+  padding-left: 1.5rem;
+}
+
+.proseEnhance :where(li) {
+  margin: 0.4rem 0;                     /* ← 原 0.5rem → 0.4rem */
+}
+
+/* 新增：图片完美支持（圆角 + 阴影 + 悬停放大 + 说明文字） */
+.customImage {
+  border-radius: 14px !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.09);
+  transition: all 0.35s ease;
+  margin: 2rem auto !important;         /* ← 紧凑版 2rem */
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.customImage:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 20px 35px -5px rgba(0, 0, 0, 0.14);
+}
+
+.imageCaption {
+  text-align: center;
+  color: #64748b;
+  font-size: 0.95rem;
+  font-style: italic;
+  margin-top: 0.75rem;
+  margin-bottom: 1.8rem !important;     /* ← 配合整体紧凑 */
+}
+
+.tableCaption {
+  text-align: left;
+  font-weight: 600;
+  color: #475569;
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}

@@ -1,0 +1,113 @@
+/* [project]/app/sucessfull-case/modern-urban-intelligent-community/caseone.module.css [app-client] (css) */
+.caseone-module__2C2wsW__customH1 {
+  letter-spacing: -.02em;
+  line-height: 1.15;
+  color: #0f172a !important;
+  margin-bottom: 2rem !important;
+  font-size: 2.75rem !important;
+  font-weight: 900 !important;
+}
+
+.caseone-module__2C2wsW__customTable {
+  border-spacing: 0;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px #0000000d;
+  border-collapse: separate !important;
+  border-radius: 12px !important;
+  width: 100% !important;
+  margin: 2rem 0 !important;
+  font-size: 1rem !important;
+}
+
+.caseone-module__2C2wsW__customTable th {
+  color: #1e293b !important;
+  text-align: left !important;
+  background-color: #f8fafc !important;
+  border-bottom: 2px solid #e2e8f0 !important;
+  padding: 1rem 1.25rem !important;
+  font-weight: 600 !important;
+}
+
+.caseone-module__2C2wsW__customTable td {
+  background-color: #fff !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+  padding: 1rem 1.25rem !important;
+}
+
+.caseone-module__2C2wsW__customTable tr:last-child td {
+  border-bottom: none !important;
+}
+
+.caseone-module__2C2wsW__customTable tr:hover td {
+  transition: background-color .2s;
+  background-color: #f1f5f9 !important;
+}
+
+.caseone-module__2C2wsW__proseEnhance {
+  color: #334155;
+  line-height: 1.75;
+}
+
+.caseone-module__2C2wsW__proseEnhance :where(h2) {
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: .5rem;
+  color: #1e293b !important;
+  margin-top: 2.8rem !important;
+  margin-bottom: 1rem !important;
+  font-size: 1.875rem !important;
+  font-weight: 800 !important;
+}
+
+.caseone-module__2C2wsW__proseEnhance :where(h3) {
+  color: #1e293b !important;
+  margin-top: 2rem !important;
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+}
+
+.caseone-module__2C2wsW__proseEnhance :where(p) {
+  margin: 1rem 0 !important;
+}
+
+.caseone-module__2C2wsW__proseEnhance :where(ul, ol) {
+  padding-left: 1.5rem;
+  margin: 1.2rem 0 !important;
+}
+
+.caseone-module__2C2wsW__proseEnhance :where(li) {
+  margin: .4rem 0;
+}
+
+.caseone-module__2C2wsW__customImage {
+  max-width: 100%;
+  height: auto;
+  transition: all .35s;
+  display: block;
+  box-shadow: 0 10px 25px -5px #00000017;
+  border-radius: 14px !important;
+  margin: 2rem auto !important;
+}
+
+.caseone-module__2C2wsW__customImage:hover {
+  transform: translateY(-6px)scale(1.02);
+  box-shadow: 0 20px 35px -5px #00000024;
+}
+
+.caseone-module__2C2wsW__imageCaption {
+  text-align: center;
+  color: #64748b;
+  margin-top: .75rem;
+  font-size: .95rem;
+  font-style: italic;
+  margin-bottom: 1.8rem !important;
+}
+
+.caseone-module__2C2wsW__tableCaption {
+  text-align: left;
+  color: #475569;
+  margin-bottom: .75rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=app_sucessfull-case_modern-urban-intelligent-community_caseone_module_7f7f9ecf.css.map*/

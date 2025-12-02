@@ -105,8 +105,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$ne
 ;
 async function getMarkdownContent() {
     const fullPath = __TURBOPACK__imported__module__$5b$externals$5d2f$path__$5b$external$5d$__$28$path$2c$__cjs$29$__["default"].join(process.cwd(), 'app/markdown/home-caseone.md');
-    const fileContents = await __TURBOPACK__imported__module__$5b$externals$5d2f$fs__$5b$external$5d$__$28$fs$2c$__cjs$29$__["promises"].readFile(fullPath, 'utf8');
-    return fileContents;
+    return __TURBOPACK__imported__module__$5b$externals$5d2f$fs__$5b$external$5d$__$28$fs$2c$__cjs$29$__["promises"].readFile(fullPath, 'utf8');
 }
 async function MountainTouristResortPage() {
     const content = await getMarkdownContent();
@@ -122,7 +121,7 @@ async function MountainTouristResortPage() {
                         children: children
                     }, void 0, false, {
                         fileName: "[project]/app/sucessfull-case/mountain-tourist-resort/page.tsx",
-                        lineNumber: 24,
+                        lineNumber: 23,
                         columnNumber: 33
                     }, void 0),
                 table: ({ children })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("table", {
@@ -130,10 +129,10 @@ async function MountainTouristResortPage() {
                         children: children
                     }, void 0, false, {
                         fileName: "[project]/app/sucessfull-case/mountain-tourist-resort/page.tsx",
-                        lineNumber: 25,
+                        lineNumber: 24,
                         columnNumber: 36
                     }, void 0),
-                // 新增：完美图片渲染
+                // 1. 图片 + 图题
                 img: ({ src, alt })=>{
                     if (!src || typeof src !== 'string') return null;
                     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("figure", {
@@ -153,7 +152,7 @@ async function MountainTouristResortPage() {
                                 blurDataURL: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
                             }, void 0, false, {
                                 fileName: "[project]/app/sucessfull-case/mountain-tourist-resort/page.tsx",
-                                lineNumber: 32,
+                                lineNumber: 31,
                                 columnNumber: 17
                             }, void 0),
                             alt && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("figcaption", {
@@ -161,26 +160,35 @@ async function MountainTouristResortPage() {
                                 children: alt
                             }, void 0, false, {
                                 fileName: "[project]/app/sucessfull-case/mountain-tourist-resort/page.tsx",
-                                lineNumber: 42,
+                                lineNumber: 41,
                                 columnNumber: 25
                             }, void 0)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/sucessfull-case/mountain-tourist-resort/page.tsx",
-                        lineNumber: 31,
+                        lineNumber: 30,
                         columnNumber: 15
                     }, void 0);
-                }
+                },
+                // 2. 用 <div> 彻底替换 <p>，断绝任何 <p> 嵌套 <figure> 的可能
+                p: ({ children })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "mb-4",
+                        children: children
+                    }, void 0, false, {
+                        fileName: "[project]/app/sucessfull-case/mountain-tourist-resort/page.tsx",
+                        lineNumber: 47,
+                        columnNumber: 32
+                    }, void 0)
             },
             children: content
         }, void 0, false, {
             fileName: "[project]/app/sucessfull-case/mountain-tourist-resort/page.tsx",
-            lineNumber: 21,
+            lineNumber: 20,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/sucessfull-case/mountain-tourist-resort/page.tsx",
-        lineNumber: 20,
+        lineNumber: 19,
         columnNumber: 5
     }, this);
 }

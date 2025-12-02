@@ -47,6 +47,15 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
 }
 
 
+// Validate ../../../app/calculator/energy/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/calculator/energy">> = Specific
+  const handler = {} as typeof import("../../../app/calculator/energy/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../../app/contact/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/contact">> = Specific
@@ -194,6 +203,15 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
 
 
 
+
+// Validate ../../../app/calculator/layout.tsx
+{
+  type __IsExpected<Specific extends LayoutConfig<"/calculator">> = Specific
+  const handler = {} as typeof import("../../../app/calculator/layout.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
 
 // Validate ../../../app/hbowa/layout.tsx
 {

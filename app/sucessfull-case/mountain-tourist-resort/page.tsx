@@ -9,8 +9,7 @@ import Image from 'next/image';
 
 async function getMarkdownContent() {
   const fullPath = path.join(process.cwd(), 'app/markdown/home-caseone.md');
-  const fileContents = await fs.readFile(fullPath, 'utf8');
-  return fileContents;
+  return fs.readFile(fullPath, 'utf8');
 }
 
 export default async function MountainTouristResortPage() {
@@ -23,8 +22,8 @@ export default async function MountainTouristResortPage() {
         components={{
           h1: ({ children }) => <h1 className={styles.customH1}>{children}</h1>,
           table: ({ children }) => <table className={styles.customTable}>{children}</table>,
-          
-          // 新增：完美图片渲染
+
+          // 1. 图片 + 图题
           img: ({ src, alt }) => {
             if (!src || typeof src !== 'string') return null;
             return (
@@ -43,6 +42,12 @@ export default async function MountainTouristResortPage() {
               </figure>
             );
           },
+
+          // 2. 用 <div> 彻底替换 <p>，断绝任何 <p> 嵌套 <figure> 的可能
+          p: ({ children }) => <div className="mb-4">{children}</div>,
+
+          // 3. 可选：让 div 看起来依旧像段落
+          //    如果你需要真正的段落样式，自己在 CSS 里写 .mb-4 或继承 prose
         }}
       >
         {content}

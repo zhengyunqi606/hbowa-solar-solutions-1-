@@ -770,14 +770,6 @@
     margin-block: calc(var(--spacing) * 1);
   }
 
-  .my-10 {
-    margin-block: calc(var(--spacing) * 10);
-  }
-
-  .my-12 {
-    margin-block: calc(var(--spacing) * 12);
-  }
-
   .-mt-4 {
     margin-top: calc(var(--spacing) * -4);
   }
@@ -808,6 +800,10 @@
 
   .mt-6 {
     margin-top: calc(var(--spacing) * 6);
+  }
+
+  .mt-8 {
+    margin-top: calc(var(--spacing) * 8);
   }
 
   .mt-10 {
@@ -1887,6 +1883,11 @@
     border-left-width: 1px;
   }
 
+  .border-l-4 {
+    border-left-style: var(--tw-border-style);
+    border-left-width: 4px;
+  }
+
   .border-l-8 {
     border-left-style: var(--tw-border-style);
     border-left-width: 8px;
@@ -2027,6 +2028,10 @@
     .bg-black\/50 {
       background-color: color-mix(in oklab, var(--color-black) 50%, transparent);
     }
+  }
+
+  .bg-blue-50 {
+    background-color: var(--color-blue-50);
   }
 
   .bg-blue-600 {
@@ -3255,18 +3260,6 @@
   @media (hover: hover) {
     .group-hover\:rotate-180:is(:where(.group):hover *) {
       rotate: 180deg;
-    }
-  }
-
-  @media (hover: hover) {
-    .group-hover\:bg-black\/40:is(:where(.group):hover *) {
-      background-color: #0006;
-    }
-
-    @supports (color: color-mix(in lab, red, red)) {
-      .group-hover\:bg-black\/40:is(:where(.group):hover *) {
-        background-color: color-mix(in oklab, var(--color-black) 40%, transparent);
-      }
     }
   }
 
